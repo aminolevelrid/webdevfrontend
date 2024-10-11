@@ -1,0 +1,87 @@
+.r {
+    height: 550px; 
+    width: 400px; 
+    display: flex; 
+    margin-top: 80px;
+    margin-left: auto; /* Centered horizontally */
+    margin-right: auto; /* Centered horizontally */
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    background-color: white;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+}
+
+@media (max-width: 600px) {
+    .r {
+        width: 90%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 400px) {
+    .r {
+        width: 95%; 
+    }
+}
+
+.l {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.u {
+    margin-right: 180px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.f {
+    margin-left: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.i {
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: none;
+}
+
+button {
+    width: 80%;
+    border-radius: 20px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: linear-gradient(grey, rgb(57, 56, 56));;
+    color: white; /* Better contrast */
+    transition: background 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+    background: linear-gradient(grey, rgb(57, 56, 56));; /* Reverse colors on hover */
+}
+
+.o {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.s {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
