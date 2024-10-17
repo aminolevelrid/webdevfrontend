@@ -1,0 +1,163 @@
+body {
+    border: 0;
+    margin: 0;
+}
+
+.pp {
+    width: 100%;
+    background-color: white;
+    position: fixed; /* Make navbar fixed */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.ppp {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    justify-content: end;
+    color: black; /* Change color to ensure visibility */
+    margin-right: 20px;
+}
+
+.kl {
+    font-size: larger;
+    color: black;
+}
+
+.f {
+    margin-top: 80px; /* Add margin to avoid overlap with fixed navbar */
+    background-image: url("architect.jpg");
+    height: 1000px;
+    width: 1500px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+.k {
+    color: black;
+    font-size: 3em; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+}
+
+
+
+.mar {
+    display: grid;
+    margin-top: 20px;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.marr {
+    display: grid;
+    margin-top: 30px;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.marr > .text > button {
+    height: 30px;
+    width: 100%;
+    border: none;
+    font-size: medium;
+}
+
+.marr > .text > h3 {
+    font-size: larger;
+    font-weight: 900;
+}
+
+.marr > .text > .d {
+    font-size: larger;
+}
+
+.marr > .text > .o {
+    opacity: 0.7;
+}
+
+.a > h4 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-left: 5vb;
+}
+
+.a > p {
+    font-size: larger;
+    margin: 0 0 20vb 5vb; /* Adjusted margin shorthand */
+}
+
+.ul > h3 {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.ul > p {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.ul > .pq {
+    width: 95%;
+    height: 50px;
+    margin: 10px;
+}
+
+.mar > .ll {
+    position: relative;
+}
+
+.mar > .ll > img {
+    height: 250px;
+}
+
+.mar > .ll > button {
+    position: absolute;
+    right: 242px; /* Adjust as needed */
+    background-color: black; /* Button background color */
+    border: none;
+    padding: 5px 10px; /* Padding around the button */
+    font-size: medium; /* Font size */
+    color: white; /* Text color */
+}
+
+/* Consolidated Media Queries */
+@media(max-width: 1000px) {
+    .f {
+        height: 800px;
+        width: 100%;
+    }
+
+    .mar {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .marr {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+
+    .mar > .ll > img {
+        height: auto;
+        width: 100%;
+    }
+
+    .marr > .text > button {
+        width: 80%; /* Button width on smaller screens */
+    }
+}
+
+@media(max-width: 900px) {
+    .mar {
+        grid-template-columns: repeat(1, 1fr); /* One column on very small screens */
+    }
+
+    .mar > .ll > button {
+        right: 330px; /* Adjusted button position */
+    }
+}

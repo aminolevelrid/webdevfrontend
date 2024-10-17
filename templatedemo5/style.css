@@ -1,0 +1,181 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgb(55, 54, 54);
+    padding: 10px; 
+}
+
+header .s h1 {
+    color: white;
+    margin: 0; 
+}
+
+header > .ss > ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    margin-left: auto; 
+}
+
+header > .ss > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; 
+}
+
+header > .ss > ul > li > a:hover {
+    color: blue;
+    text-decoration: underline; 
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+    }
+    header > .ss > ul {
+        margin-left: 0; 
+        justify-content: center; 
+    }
+}
+
+.p {
+    background-image: url(maxresdefault.jpg);
+    background-origin:padding-box;
+    height: 800px; 
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.p > .o {
+    margin: 0 auto;
+    height: 400px;
+    width: 80%; 
+    max-width: 300px; 
+    background-color: rgb(143, 143, 217);
+    border-radius: 2rem;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+
+.p > .o > button {
+    height: 50px;
+    width: 80%; /* Use percentage for button width */
+    max-width: 200px; /* Prevent it from exceeding 200px on larger screens */
+}
+
+.p > .o > button:hover {
+    background-color: blue;
+}
+
+.ok {
+    background-color: #f0f0f0;          
+    border: 1px solid #ccc;   
+    border-radius: 10px;             
+}
+
+.oo {
+    font-size: 18px;         
+    color: #333;             
+    font-weight: bold;       
+    margin-bottom: 10px; 
+    padding: 0 100px; 
+}
+
+h1 {
+    font-size: 24px;          
+    color: #007BFF;           
+    margin: 10px 0px; 
+    padding: 0 200px; 
+}
+
+.ou {
+    margin-top: 15px; 
+    padding: 0 200px; 
+}
+
+.ou p {       
+    line-height: 1.2;         
+    color: #666;            
+}
+
+footer {
+    margin-top: 20px;
+    border-bottom: 2px solid rgb(181, 172, 172);
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; 
+    padding: 20px 0; 
+}
+
+footer > .k > h3 {
+    font-size: 30px;
+}
+
+footer > .k > h1 {
+    font-size: 40px;
+}
+
+footer > .z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+footer > .z > img {
+    height: 30px;
+}
+
+footer > .l > img {
+    background-color: aqua;
+    mix-blend-mode: multiply;
+}
+
+footer > p {
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+    .p {
+        height: 600px; /* Adjust height for medium screens */
+    }
+    .p > .o {
+        margin: 0 20px; /* Center with margins */
+        height: 300px; /* Reduce size for smaller screens */
+    }
+    footer {
+        height: auto; /* Set height to auto for flexibility */
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .p {
+        height: 500px; 
+    }
+    .p > .o {
+        height: 300px;
+        margin: 0 10px;
+    }
+    footer {
+        padding: 10px; 
+    }
+    
+    footer > .k > h1, footer > .k > h3, footer > p {
+        font-size: 18px; 
+    }
+}

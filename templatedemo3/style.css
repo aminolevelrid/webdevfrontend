@@ -1,0 +1,102 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+.pp{
+  
+    gap: 10px;;
+}
+
+.p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height:800px;
+    margin-left: 50px;;
+}
+.p>.l{
+    height:600px;
+    width:500px;
+    font-size: 20px;
+}
+.p>.l>h1{
+    margin-left: 100px;
+}
+.p>.l>h4{
+    margin: 50px 0px 50px 120px;
+    opacity: 0.4;
+    font-size:30px;
+}
+.p>.l>.pl{
+    opacity: 0.6;
+}
+
+.p>.z>img{
+    margin-left:150px;
+    height:650px;
+}
+.o{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left:200px
+}
+.o>.l{
+    margin-top: 200px;
+    height: 600px;
+    font-size: 20px;
+}
+.o>.oo>h1{
+    margin-left:100px;
+}
+.o>.oo>p{
+    opacity: 0.6;
+}
+.o>.oo{
+    font-size: 20px;
+    
+}
+
+.kk{
+    background-image: url("hamburger.jpg");
+    height: 800px;
+    background-size: cover; 
+    background-position: center; 
+}
+
+@media (max-width: 1000px){
+    .kk{
+        height: 600px;
+        width: 100%;
+    }
+    .p>.z img{
+        height:auto;
+        width:80%;
+    }
+    .o{
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .o img{
+        height:auto;
+        width:100%;
+        margin-top: 10px;
+    }
+    .o>.oo{
+        margin-left: 50px;
+        font-size: 20px;
+    }
+    .o>.oo>h1{
+        margin-left:300px;
+    }
+    
+}
+
+@media (max-width: 500px){
+    .kk{
+        height: 400px;
+        width: 100%;
+    }
+}

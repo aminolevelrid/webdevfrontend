@@ -1,0 +1,186 @@
+header{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/022/575/456/small_2x/chamomile-flower-field-camomile-in-the-nature-field-of-camomiles-at-sunny-day-at-nature-camomile-daisy-flowers-in-summer-day-chamomile-flowers-field-wide-background-in-sun-light-generative-ai-photo.jpg);
+     background-repeat: no-repeat;
+     width: 100%;
+     height: 80vh;
+     background-size: cover;
+ }
+ .navbar {
+     list-style-type: none; 
+     padding: 0; 
+     margin: 0; 
+     display: flex; 
+ }
+ .navbar a {
+     display: block;
+     padding: 14px;
+     text-align: center; 
+     color: white; 
+     text-decoration: none; 
+ }
+ .navbar a:hover{
+    color:blue;
+    text-decoration: double;
+ }
+ 
+ .wel{
+     font-size: large;
+     padding-top: 150px;
+     padding-left: 600px;
+     color: black;
+ }
+.k{
+    margin-left:300px;
+    height:200px;
+    width:900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:400px;
+    width:1000px;
+    margin-left:250px;
+    gap:20px;
+}
+.pp>.n{
+height:340px;
+margin-top:40px;
+opacity: 0.8;
+
+}
+.pp>.nn{
+    font-size:20px;
+}
+.pp>.n>p{
+    font-size:25px;
+    color: black;
+}
+.ppp{
+    display: flex;
+    flex-direction: column;
+    height:500px;
+    margin-top:200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ppp>.dd{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.ppp>.dd>img{
+    height:200px;
+    padding:10px
+}
+.ppp>.d{
+    font-size: 20px;
+    font-weight: 800;
+}
+.ppp>.ddd{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+.ppp>.ddd>img{
+    height:200px;
+    padding:10px
+}
+.pho{
+    display: flex;
+}
+
+.nine{
+    width: 900px;
+    height: 5vh;
+    background-color:rgb(133, 107, 107);
+    
+}
+
+.ten{
+    width: 100px;
+    height: 5vh;
+    background-color:rgb(135, 20, 20);
+    
+}
+
+.nine p{
+    padding-left: 450px;
+    padding-top: 0.1px;
+}
+
+.photo{
+    padding-left: 200px;
+}
+
+.eight{
+    width: 850px;
+    height: 5vh;
+    background-color:rgb(133, 107, 107);
+    
+}
+
+.fift{
+    width: 150px;
+    height: 5vh;
+    background-color:rgb(135, 20, 20);
+    
+}
+
+.we{
+    padding-left: 200px;
+}
+
+.eight p{
+    padding-left: 450px;
+}
+
+
+.web{
+    display: flex;
+    
+}
+footer {
+    margin-top: 20px;
+    height:10px;
+    background-color: rgb(99, 97, 97);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; 
+}
+footer>.k{
+    padding-right:280px;
+}
+footer>.k>button{
+    height:50px;
+    width:200px;
+}
+
+footer > .z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+footer > .z > img {
+    height: 30px;
+}
+footer:hover{
+    background-color: black;
+}
+
+

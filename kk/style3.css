@@ -1,0 +1,87 @@
+/* Styling for the navigation bar */
+nav {
+    background-color: #333;  /* Example background color */
+    padding: 10px 20px;
+}
+
+#sneha {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;     /* Center the content vertically */
+    width: 100%;
+}
+
+ul {
+    display: flex;           /* Make the list items align horizontally */
+    gap: 20px;               /* Add space between list items */
+    list-style: none;        /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    color: white;            /* Example text color */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styling for the container below the nav */
+#container {
+    display: flex;
+    gap: 30px;
+    height: 150px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Add space between nav and container */
+    background-color: aquamarine;
+}
+
+#container > div {
+    
+    border: 2px solid yellow;
+    height: 110px;
+    width: 90px; 
+    display: flex;
+    align-items: center;  /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center;  /* Center the text inside the div */
+    padding: 10px;       /* Adjust padding if necessary */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+    #container1 {
+        border: 2px solid yellow;
+        box-sizing: border-box; 
+        transition: transform 0.6s ease, background-color 0.3s ease; 
+    }
+    
+    #container1:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }
+    #container2:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }
+    #container3:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }
+    #container4:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }
+    #container5:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }
+    #container6:hover {
+        transform: scale(1.2); 
+        background-color: #3bfcff; 
+        border:2px solid #3bfcff;
+    }

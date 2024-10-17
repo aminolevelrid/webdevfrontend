@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-color: #f0f0f0; */
+}
+
+.slider {
+    width: 1000vw;  /* Set width according to your needs */
+    overflow: hidden; /* Hide the overflowing slides */
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px*20); /* Width of each slide times the number of slides */
+    animation: scroll 20s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    height: 150px;
+    line-height: 150px;
+    margin: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background-color: #18b3d2;
+    border-radius: 65px;
+    flex-shrink: 0; /* Prevent the slides from shrinking */
+}
+
+/* Keyframes for the sliding animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
