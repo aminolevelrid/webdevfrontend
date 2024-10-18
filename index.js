@@ -32,7 +32,20 @@ const map=(arr,fun)=>{
 function cube(x){
     return x*x*x
 }
-console.log(map(a,cube));
-console.log(a.map(cube));
+// console.log(map(a,cube));
+// console.log(a.map(cube));
 
-console.log(map(a,square));
+// console.log(map(a,square));
+
+let y=5;
+
+const newArr=a.map((x,y)=>{
+    return x**y;
+}) 
+console.log(newArr);
+
+function cd(x){
+    return x%2;
+}
+let oddarr=a.filter(cd);
+console.log(oddarr);
