@@ -1,25 +1,27 @@
-const mongoose=require("mongoose");
-const username=new mongoose.Schema(
-    {
-        name:{
-            type:String,
-            required:true
-        },
-        email:{
-            type:String,
-            required:true,
-            unique:true,
-        },
-        password:{
-            type:String,
-            required:true,
-            unique:true
-        },
-        
-    },
-    {timeStamps:true}
-);
+const mongoose = require("mongoose");
+const shortid = require("shortid"); 
 
-const Userl=mongoose.model("Userl",username);
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true, // Email should be unique
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  shortid: {
+    type: String,
+    unique: true,
+    default: shortid.generate, // Ensure shortid is generated for each user
+  },
+});
 
-module.export=Userl
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;

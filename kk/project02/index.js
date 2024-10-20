@@ -1,60 +1,42 @@
 const express = require("express");
-const path=require('path')
-const staticrouter=require("./Routers/static")
+const path = require('path');
+const staticrouter = require("./Routers/static");
 const url = require("./Routers/url");
-const userrouter=require("./Routers/user.js")
+const userrouter = require("./Routers/user.js");
 const URL = require("./models/user");
 const { connect } = require("./connection");
+const cookeiparser=require('cookie-parser')
+const {restrictToLoggedUserOnly}=require("./middleware/auth.js")
 
 const app = express();
-const port = 8001;
+const port = 8002;
+(async () => {
+    try {
+        await connect("mongodb+srv://ayushagrawalcsaiml22:ayushagrawal@cluster0.vldfe.mongodb.net/youtube255");
+        console.log("MongoDB connected");
+    } catch (err) {
+        console.log("MongoDB did not connect", err);
+    }
+})();
 
-
-connect("mongodb+srv://ayushagrawalcsaiml22:ayushagrawal@cluster0.vldfe.mongodb.net/youtube255")
-    .then(() => console.log("MongoDB connected"))
-    .catch((err) => console.log("MongoDB did not connect", err));
-    app.set("view engine","ejs")
-    app.set('views',path.resolve("./views"))
+app.set("view engine", "ejs");
+app.set('views', path.resolve("./views"));
 
 app.use(express.json());
-app.use(express.urlencoded({extended:false}))
-app.use("/",staticrouter);
-// app.get("/test", async (req, res) => {
-//     try {
-//         // Fetch all URLs as an array
-//         const allUrls = await URL.find({});
+app.use(express.urlencoded({ extended: false }));
+app.use(cookeiparser());
+app.use("/", staticrouter);
 
-//         // Pass the array of URLs to the EJS template
-//         return res.render("home", {
-//             urls: allUrls
-//         });
-//     } catch (error) {
-//         console.error("Error fetching URLs:", error);
-//         res.status(500).json({ error: "An error occurred while fetching URLs" });
-//     }
-// });
-
-    /*return res.end (`
-       /*<html> 
-        <head>
-        </head>
-        <body>
-        <ol>
-        ${allurls.modifiedPaths(url=>`<li>${url.shortID}-${url.redirectURL}-${url.visithistory.length}</li>`).join('')}
-        </ol>
-        </body>
-        </html>`)*/
-// })
-app.use("/url", url);
-app.use("/user",userrouter)
+app.use("/url", restrictToLoggedUserOnly,url);
+app.use("/user", userrouter);
 
 app.get("/url/:shortID", async (req, res) => {
     const shortID = req.params.shortID;
     try {
         const entry = await URL.findOneAndUpdate(
-            { shortId: shortID }, // Use `shortId` instead of `shortID` to match the schema field name
-            { $push: { visithistory: { timestamps: Date.now() } } }, // Use `timestamp` instead of `timestamps`
-            { new: true } // This option returns the modified document
+            { shortId: shortID }, 
+            { $push: { visithistory: { timestamp: Date.now() } } },
+            { new: true }
         );
         if (!entry) return res.status(404).json({ error: "Short URL not found" });
         res.redirect(entry.redirectURL);
@@ -63,5 +45,4 @@ app.get("/url/:shortID", async (req, res) => {
         res.status(500).json({ error: "An error occurred while redirecting" });
     }
 });
-
 app.listen(port, () => console.log(`Server started at port: ${port}`));

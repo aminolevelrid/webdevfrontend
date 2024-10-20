@@ -5,21 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TimeTable</title>
     <style>
-       
-        table{
-            width:100%;
-            border:2px solid black;
-         }
-         th,td{
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
             border: 2px solid black;
-            padding:10px;
-         }
-
-       
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td {
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        td:hover {
+            background-color: #e0f7fa;
+        }
+        th[colspan="10"] {
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
-    <table >
+    <h2 style="text-align: center;">Class Timetable</h2>
+    
+    <table>
         <tr>
             <th colspan="10">Timetable</th>
         </tr>
@@ -34,35 +51,47 @@
             <th colspan="2">Fri</th>
         </tr>
         <tr>
-            <td colspan="2">Science</td>
-            <td colspan="2">Maths</td>
-            <td colspan="2">Science</td>
-            <td colspan="2">Maths</td>
-            <td colspan="2">Arts</td>
+            <td colspan="2" teacher="Mrs. Smith" subject="Science">Science</td>
+            <td colspan="2" teacher="Mr. Brown" subject="Maths">Maths</td>
+            <td colspan="2" teacher="Mrs. Smith" subject="Science">Science</td>
+            <td colspan="2" teacher="Mr. Brown" subject="Maths">Maths</td>
+            <td colspan="2" teacher="Ms. White" subject="Arts">Arts</td>
         </tr>
         <tr>
-            <td colspan="2">Social</td>
-            <td colspan="2">Hindi</td>
-            <td colspan="2">English</td>
-            <td colspan="2">Social</td>
-            <td colspan="2">Sports</td>
+            <td colspan="2" teacher="Mrs. Johnson" subject="Social">Social</td>
+            <td colspan="2" teacher="Mr. Singh" subject="Hindi">Hindi</td>
+            <td colspan="2" teacher="Ms. Davis" subject="English">English</td>
+            <td colspan="2" teacher="Mrs. Johnson" subject="Social">Social</td>
+            <td colspan="2" teacher="Coach Lee"subject="Sports">Sports</td>
         </tr>
         <tr>
             <th colspan="10">Lunch</th>
         </tr>
         <tr>
-            <td colspan="2">Science</td>
-            <td colspan="2">Maths</td>
-            <td colspan="2">Science</td>
-            <td colspan="2">Maths</td>
-            <td colspan="2" rowspan="2">Project</td>
+            <td colspan="2" teacher="Mrs. Smith" subject="Science">Science</td>
+            <td colspan="2" teacher="Mr. Brown" subject="Maths">Maths</td>
+            <td colspan="2" teacher="Mrs. Smith" subject="Science">Science</td>
+            <td colspan="2" teacher="Mr. Brown" subject="Maths">Maths</td>
+            <td colspan="2" rowspan="2" teacher="Mr. Roberts" subject="Project">Project</td>
         </tr>
         <tr>
-            <td colspan="2">Social</td>
-            <td colspan="2">Hindi</td>
-            <td colspan="2">English</td>
-            <td colspan="2">Social</td>
+            <td colspan="2" teacher="Mrs. Johnson" subject="Social">Social</td>
+            <td colspan="2" teacher="Mr. Singh" subject="Hindi">Hindi</td>
+            <td colspan="2" teacher="Ms. Davis" subject="English">English</td>
+            <td colspan="2" teacher="Mrs. Johnson" subject="Social">Social</td>
         </tr>
     </table>
+
+    <script>
+        document.querySelectorAll('td').forEach(function(td) {
+            td.addEventListener('click', function() {
+                const teacher = this.getAttribute('teacher');
+                const subject = this.getAttribute('subject');
+                if (teacher && subject) { 
+                    alert(`you clicked on this ${subject} &teacher=${teacher}`);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

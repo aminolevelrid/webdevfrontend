@@ -16,6 +16,10 @@ const userSchema = new mongoose.Schema(
                 timestamps: { type: Number },
             },
         ],
+        createdBy:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"user"
+        },
     },
     { timestamps: true }
 );
