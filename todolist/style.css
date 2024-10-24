@@ -1,0 +1,66 @@
+body {
+    background-image: url("https://cdn.wildrocket.io/media/JWKzdonTttBD2UGQ0R28nLSLX4I0pYdADrV1FnU6.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    
+    margin-left: 500px;
+    height: 300px; /* Increased height for space */
+    width: 600px;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+#cc {
+    height: 50px;
+    width: 100%;
+    border-radius: 2px solid linear-gradient(purple, pink);
+    background: linear-gradient(purple, pink);
+    color: white;
+}
+
+#cc > h1 {
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+#ll {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#name, #disc {
+    height: 30px;
+    width: 70%;
+    border-radius: 1rem;
+    padding: 5px;
+}
+
+#o {
+    margin-left: 180px;
+    margin-top: 20px;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 1rem;
+    border-color: orange;
+    background-color: aqua;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.note {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid grey;
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
