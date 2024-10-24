@@ -1,0 +1,50 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2024/03/07/10/38/simba-8618301_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#container{
+    height:250px;
+    width:900px;
+    /* border:2px solid black; */
+    border-radius: 1rem;
+    margin-top:200px;
+    background-color:white;
+    margin-left: 400px;;
+}
+#cc{
+    height:90px;
+    border:2px solid red;
+    border-radius: 1rem;
+    background-color: red;
+
+}
+#f{
+    margin-left: 290px;
+    color:white;
+    margin-top: 20px;
+    font-weight: 900;
+}
+#ccc{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#p{
+margin-top: 10px;
+height:50px;
+width:750px;
+border-radius: 1rem;
+border-color: orange;
+}
+#btn{
+    height:50px;
+    width:160px;
+    border-color:orange;
+    border-radius: 2rem;
+    background-color: aqua;
+}
+#btn:hover{
+    background-color: beige;
+}
