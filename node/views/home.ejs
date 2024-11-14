@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            width: 100%;
+            text-align: center;
+            color: #333;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            max-width: 90%;
+            text-align: left;
+        }
+        .card div {
+            margin-bottom: 10px;
+        }
+        .card div strong {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Home</h1>
+    <% for(let student of sd) { %>
+        <div class="card">
+            <div><strong>Student Name:</strong> <%= student.name %></div>
+            <div><strong>Roll No:</strong> <%= student.rollno %></div>
+            <div><strong>Marks:</strong> <%= student.marks %></div>
+            <div><strong>Course:</strong> <%= student.course %></div>
+        </div>
+    <% } %>
+</body>
+</html>
